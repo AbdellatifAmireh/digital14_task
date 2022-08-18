@@ -17,22 +17,25 @@ class EventDetailsScreen extends StatefulWidget {
 }
 
 class _EventDetailsScreenState extends State<EventDetailsScreen> {
-  late Color col;
-  
+  late Color col = Colors.grey;
+  late bool addToFav = false;
+
   List<Widget>? favorateIcon() {
     return [
       InkWell(
         onTap: () {
           setState(() {
             //widget.favoriteDataList.add(widget.event.id.toString());
-            col = Colors.red;
+            if (addToFav) {
+              col = Colors.grey;
+              addToFav = false;
+            } else {
+              col = Colors.red;
+              addToFav = true;
+            }
           });
         },
-        child: Icon(Icons.favorite, color: col
-            /*(widget.favoriteDataList.contains(widget.event.id.toString()))
-                    ? Colors.red
-                    : Colors.blue*/
-            ),
+        child: Icon(Icons.favorite, color: col),
       ),
     ];
   }

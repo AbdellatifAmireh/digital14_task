@@ -51,7 +51,6 @@ class EventItem extends StatelessWidget {
             textAlign: TextAlign.left,
           ),
           subtitle: Text('${events.venue?.displayLocation} \n$formattedDate'),
-          trailing: const Icon(Icons.favorite),
         ),
       ),
     );
