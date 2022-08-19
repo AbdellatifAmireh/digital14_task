@@ -26,7 +26,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (BuildContext context) => eventsCubit,
-            child: EventsScreen(),
+            child: const EventsScreen(),
           ),
         );
       case eventDetailsScreen:

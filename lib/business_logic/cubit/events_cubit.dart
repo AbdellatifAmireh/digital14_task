@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:digital14_task/data/models/characters.dart';
 import 'package:flutter/foundation.dart';
 import 'package:meta/meta.dart';
 

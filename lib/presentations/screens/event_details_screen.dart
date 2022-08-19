@@ -7,7 +7,7 @@ import '../../constants/my_colors.dart';
 class EventDetailsScreen extends StatefulWidget {
   final Events event;
   //late List<String> favoriteDataList;
-  EventDetailsScreen({
+  const EventDetailsScreen({
     Key? key,
     required this.event,
   }) : super(key: key);

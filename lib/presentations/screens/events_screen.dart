@@ -8,7 +8,7 @@ import '../widgets/event_item.dart';
 
 class EventsScreen extends StatefulWidget {
   //late List<String> favoriteDataList;
-  EventsScreen({Key? key,}) : super(key: key);
+  const EventsScreen({Key? key,}) : super(key: key);
 
   @override
   State<EventsScreen> createState() => _EventsScreenState();
@@ -93,7 +93,7 @@ class _EventsScreenState extends State<EventsScreen> {
   }
 
   Widget _buildAppBarTitle() {
-    return Text(
+    return const Text(
       'Events Digital14',
       style: TextStyle(color: MyColors.myWhite),
     );
@@ -128,7 +128,7 @@ class _EventsScreenState extends State<EventsScreen> {
 
   Widget buildLoadedListWidget() {
     return ListView.builder(
-      physics: AlwaysScrollableScrollPhysics(),
+      physics: const AlwaysScrollableScrollPhysics(),
       itemCount: _searchTextController.text.isEmpty
           ? allEvents.length
           : searchedForEvents.length,
@@ -149,7 +149,7 @@ class _EventsScreenState extends State<EventsScreen> {
       appBar: AppBar(
         backgroundColor: MyColors.myBlue,
         leading: _isSearching
-            ? BackButton(
+            ? const BackButton(
                 color: MyColors.myWhite,
               )
             : Container(),
